@@ -114,16 +114,18 @@
     background: #FFFFFFFF;
     border-color: #9095A0FF;
 }
-
+.search_box{
+    margin-left: 159px;
+}
 .search_box :disabled+.icon,
 .search_box :disabled+.icon+.icon {
     fill: #171A1FFF;
 }
 
-.headerNavBar {
+/* .headerNavBar {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .logoname {
     font-size: 16px;

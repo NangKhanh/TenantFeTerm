@@ -40,30 +40,31 @@ const Topbar = () => {
   };
 
   return (
-    <Header className="headerNavBar">
-      {navStyle === NAV_STYLE_DRAWER || ((navStyle === NAV_STYLE_FIXED || navStyle === NAV_STYLE_MINI_SIDEBAR) && width < TAB_SIZE) ?
-        <div className="gx-linebar gx-mr-3 gx-flex-row">
-          <i className="gx-icon-btn icon icon-menu"
-            onClick={() => {
-              dispatch(toggleCollapsedSideNav(!navCollapsed));
-            }}
-          />
-          <Link to="/" className=" gx-pointer">
-            <img className="logo" alt="" src={("/assets/images/mainLogo.png")} />
-          </Link>
-        </div> : null}
-      {(navStyle === NAV_STYLE_FIXED ||  navStyle === NAV_STYLE_MINI_SIDEBAR) && width > TAB_SIZE ?
-        <Link to="/main/dashboard/crypto" className=" gx-pointer brand gx-flex-row gx-align-items-center">
-          <img className="logo" alt="" src={("/assets/images/mainLogo.png")} /><span className="logoname">LOGO</span>
-        </Link> : null
-      }
-
-      <div>
-        <SearchBox styleName="search_box gx-d-none gx-d-lg-block gx-lt-icon-search-bar-lg"
+    <Header >
+      <div className="gx-flex-row"> 
+        {navStyle === NAV_STYLE_DRAWER || ((navStyle === NAV_STYLE_FIXED || navStyle === NAV_STYLE_MINI_SIDEBAR) && width < TAB_SIZE) ?
+          <div className="gx-linebar gx-mr-3 gx-flex-row">
+            <i className="gx-icon-btn icon icon-menu"
+              onClick={() => {
+                dispatch(toggleCollapsedSideNav(!navCollapsed));
+              }}
+            />
+            <Link to="/" className=" gx-pointer">
+              <img className="logo" alt="" src={("/assets/images/mainLogo.png")} />
+            </Link>
+          </div> : null}
+        {(navStyle === NAV_STYLE_FIXED || navStyle === NAV_STYLE_MINI_SIDEBAR) && width > TAB_SIZE ?
+          <Link to="/main/dashboard/crypto" className=" gx-pointer brand gx-flex-row gx-align-items-center">
+            <img className="logo" alt="" src={("/assets/images/mainLogo.png")} /><span className="logoname">LOGO</span>
+          </Link> : null
+        }
+        <SearchBox styleName="search_box gx-d-none gx-d-lg-block gx-lt-icon-search-bar-lg "
           placeholder="Search..."
           onChange={updateSearchChatUser}
           value={searchText} />
       </div>
+
+
       <div>
         <ul className="gx-header-notifications gx-ml-auto">
           <li className="gx-notify gx-notify-search gx-d-inline-block gx-d-lg-none">
