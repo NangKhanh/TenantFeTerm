@@ -1,0 +1,20 @@
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color : #dbdfe0;
+    color : black;
+}
+
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover {
+    color : #545454
+}
+
+.ant-menu-vertical .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-inline .ant-menu-item:after{
+    border-right: 3px solid #080808;
+}
+
+.ant-menu:not(.ant-menu-horizontal) :hover{
+    /* background-color : #dbdfe0; */
+    color : black;
+}
+.icons{
+    height: 20px;
+}

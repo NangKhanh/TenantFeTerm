@@ -1,0 +1,133 @@
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    margin-right: 10px;
+}
+.userInfor span {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #9095A0FF;
+}
+
+.userInfor i {
+    height: 18px;
+}
+
+.btn_sign_up {
+    width: 77px;
+    height: 32px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #FFFFFFFF;
+    background: #565E6DFF;
+    opacity: 1;
+    border: none;
+    border-radius: 0;
+
+}
+
+.btn_sign_up:hover {
+    color: #FFFFFFFF;
+    background: #424956FF;
+}
+
+/* Pressed */
+.btn_sign_in:hover:active {
+    color: #FFFFFFFF;
+    background: #323842FF;
+}
+
+
+.btn_sign_in {
+    width: 77px;
+    height: 32px;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #565E6DFF;
+    background: #FFFFFFFF;
+    opacity: 1;
+    border-radius: 0;
+    border-width: 1px;
+    border-color: #565E6DFF;
+    border-style: solid;
+}
+
+.btn_sign_in:hover {
+    color: #424956FF;
+    background: #FFFFFFFF;
+
+}
+
+/* Pressed */
+.btn_sign_in:hover:active {
+    color: #323842FF;
+    background: #FFFFFFFF;
+}
+
+.btn_sign_in:disabled {
+    opacity: 0.4;
+}
+
+.search_box input {
+    opacity: 1;
+    width: 445px;
+    padding-left: 34px;
+    padding-right: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    background: #FFFFFFFF;
+    border-width: 1px;
+    border-radius: 0%;
+    border-color: #9095A0FF(21, 22, 22);
+    outline: none;
+}
+
+.search_box i {
+    color: black;
+}
+
+.search_box input:hover {
+    color: #BCC1CAFF;
+    background: #FFFFFFFF;
+    border-color: #6F7787FF;
+}
+
+/* focused */
+.search_box input:focused {
+    color: #BCC1CAFF;
+    background: #FFFFFFFF;
+    border-color: #9095A0FF;
+}
+
+/* disabled */
+.search_box input:disabled {
+    color: #BCC1CAFF;
+    background: #FFFFFFFF;
+    border-color: #9095A0FF;
+}
+
+.search_box :disabled+.icon,
+.search_box :disabled+.icon+.icon {
+    fill: #171A1FFF;
+}
+
+.headerNavBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoname {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #171A1FFF;
+}
