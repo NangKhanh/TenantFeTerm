@@ -25,28 +25,28 @@ const SidebarContent = ({ sidebarCollapsed, setSidebarCollapsed }) => {
             theme={themeType === "lite"}
             mode="inline">
             <Menu.Item key="main/dashboard" className="gx-mt-3">
-              <Link to="/main/dashboard"><i className="icons"><AppstoreOutlined /></i>
+              <Link to="/main/dashboard"><i className="icon icon-widgets"/>
                 <span> <IntlMessages id="sidebar.dashboard" /></span></Link>
             </Menu.Item>
             <Menu.Item key="main/organization">
-              <Link to="/main/organization"><i className="icons"><FileOutlined /></i>
+              <Link to="/main/organization"><i className="icon icon-folder-o"/>
                 <span> <IntlMessages id="Organization" /></span></Link>
             </Menu.Item>
             <Menu.Item key="main/inventory">
-              <Link to="/main/inventory"><i><GoldFilled /></i>
+              <Link to="/main/inventory"><i className="icon icon-crm"/>
                 <span> <IntlMessages id="Inventory" /></span></Link>
             </Menu.Item>
             <Menu.Item key="main/calculation">
-              <Link to="/main/calculation"><i><MessageOutlined /></i>
+              <Link to="/main/calculation"><i className="icon icon-popconfirm"/>
                 <span> <IntlMessages id="Calculation" /></span></Link>
             </Menu.Item>
             <Menu.Item key="main/report">
-              <Link to="/main/report"><i><BarChartOutlined /></i>
+              <Link to="/main/report"><i className="icon icon-timeline"/>
                 <span> <IntlMessages id="Report " /></span></Link>
             </Menu.Item>
 
             <Menu.Item key="main/faq">
-              <Link to="/main/faq"><i><QuestionOutlined /></i>
+              <Link to="/main/faq"><i className="icon icon-rendaring-calendar"/>
                 <span> <IntlMessages id="FAQ" /></span></Link>
             </Menu.Item>
           </Menu>
