@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 // import './style/dashboard.css'
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import Item from "../../../components/dashboard/Item";
 const Dashboard = ({ match }) => {
   const [rootApiRes, setRootApiRes] = useState([]);
   const [list, setList] = useState([]);
   const location = useLocation();
-
-
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -33,11 +32,7 @@ const Dashboard = ({ match }) => {
       </h1>
       <p>Supports organization in meansuring and managing CO2 footprint.</p>
       <div>
-        <ul>
-          {list?.map((item, index) => (
-            <li key={index}>{item.title}</li>
-          ))}
-        </ul>
+        <Item list = {list} />
       </div>
     </div>
   )
