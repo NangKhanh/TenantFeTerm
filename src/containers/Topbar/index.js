@@ -24,7 +24,7 @@ const Topbar = () => {
   const width = useSelector(({ common }) => common.width);
   const [searchText, setSearchText] = useState('');
   const dispatch = useDispatch();
-  const delay = 1000
+  const delay = 700
   const updateSearchChatUser = (evt) => {
     setSearchText(evt.target.value);
   };

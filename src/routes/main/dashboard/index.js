@@ -32,7 +32,11 @@ const Dashboard = () => {
       </h1>
       <p>Supports organization in meansuring and managing CO2 footprint.</p>
       <div>
-        <Item list = {list} />
+        <ul>
+          {list?.map((item, index) => (
+            <li key={index}> <Item item={item} /> </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
