@@ -8,7 +8,7 @@ import Photos from "components/wall/Photos/index";
 import Friends from "components/wall/Friends/index";
 import CustomScrollbars from "util/CustomScrollbars";
 // import RecentActivity from "components/dashboard/CRM/RecentActivity";
-import {communitiesList, friendList, interestList, photoList, postList, recentActivity, user, userInfo} from "./data"
+import {communitiesList, friendList, interestList, photoList, postList, user, userInfo} from "./data"
 import Communities from "../../../components/wall/Communities/index";
 
 
