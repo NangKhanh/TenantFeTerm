@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import './style/dashboard.css'
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import Item from "../../../components/dashboard/Item";
-const Dashboard = ({ match }) => {
+const Dashboard = () => {
   const [rootApiRes, setRootApiRes] = useState([]);
   const [list, setList] = useState([]);
   const location = useLocation();
