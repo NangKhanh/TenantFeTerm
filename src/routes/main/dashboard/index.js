@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './style/dashboard.css'
+// import './style/dashboard.css'
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 const Dashboard = ({ match }) => {
   const [rootApiRes, setRootApiRes] = useState([]);
@@ -21,7 +21,7 @@ const Dashboard = ({ match }) => {
   useEffect(() => {
     let searchValue = location?.search?.split("=")[1] || " ";
     setList(rootApiRes.filter((api) => {
-      return api.title.toLowerCase().includes(searchValue.toLowerCase());
+      return api.title.replace(/\s/g, '').toLowerCase().includes(searchValue.replace(/\s/g, '').toLowerCase());
     }))
   }, [location]);
 

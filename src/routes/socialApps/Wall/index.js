@@ -7,7 +7,7 @@ import Interests from "components/wall/Interests/index";
 import Photos from "components/wall/Photos/index";
 import Friends from "components/wall/Friends/index";
 import CustomScrollbars from "util/CustomScrollbars";
-import RecentActivity from "components/dashboard/CRM/RecentActivity";
+// import RecentActivity from "components/dashboard/CRM/RecentActivity";
 import {communitiesList, friendList, interestList, photoList, postList, recentActivity, user, userInfo} from "./data"
 import Communities from "../../../components/wall/Communities/index";
 
@@ -40,7 +40,7 @@ const Wall = () => {
             <Communities communitiesList={communitiesList}/>
             <span className="gx-text-primary gx-fs-md gx-pointer gx-d-block gx-mb-4">See All Communities <i
               className={`icon icon-long-arrow-right gx-fs-xxl gx-ml-2 gx-d-inline-flex gx-vertical-align-middle`}/></span>
-            <RecentActivity recentList={recentActivity} shape="square"/>
+            {/* <RecentActivity recentList={recentActivity} shape="square"/> */}
           </CustomScrollbars>
         </Col>
       </Row>
