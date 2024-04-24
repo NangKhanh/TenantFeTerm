@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Avatar, Button, Layout, Popover } from "antd";
 import { Link } from "react-router-dom";
 import { GlobalOutlined } from '@ant-design/icons'
@@ -13,35 +13,39 @@ import Auxiliary from "util/Auxiliary";
 import { NAV_STYLE_DRAWER, NAV_STYLE_FIXED, NAV_STYLE_MINI_SIDEBAR, TAB_SIZE } from "../../constants/ThemeSetting";
 import { useDispatch, useSelector } from "react-redux";
 import './Style/index.css'
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 const { Header } = Layout;
 
 const Topbar = () => {
+
+  const history = useHistory();
   const { navStyle } = useSelector(({ settings }) => settings);
   const navCollapsed = useSelector(({ common }) => common.navCollapsed);
   const width = useSelector(({ common }) => common.width);
   const [searchText, setSearchText] = useState('');
   const dispatch = useDispatch();
-  // const languageMenu = () => (
-  //   <CustomScrollbars className="gx-popover-lang-scroll">
-  //     <ul className="gx-sub-popover">
-  //       {languageData.map(language =>
-  //         <li className="gx-media gx-pointer" key={JSON.stringify(language)} onClick={() =>
-  //           dispatch(switchLanguage(language))
-  //         }>
-  //           <i className={`flag flag-24 gx-mr-2 flag-${language.icon}`} />
-  //           <span className="gx-language-text">{language.name}</span>
-  //         </li>
-  //       )}
-  //     </ul>
-  //   </CustomScrollbars>);
-
+  const delay = 500
   const updateSearchChatUser = (evt) => {
     setSearchText(evt.target.value);
   };
 
+  useEffect(() => {
+    const id = setTimeout(() => {
+      if (!searchText) {
+        history.push('?');
+      }
+      else {
+        history.push(`?search=${searchText}`)
+      }
+    }, delay)
+    return () => {
+      clearTimeout(id)
+    }
+  }, [searchText, delay , history])
+
   return (
     <Header >
-      <div className="gx-flex-row"> 
+      <div className="gx-flex-row">
         {navStyle === NAV_STYLE_DRAWER || ((navStyle === NAV_STYLE_FIXED || navStyle === NAV_STYLE_MINI_SIDEBAR) && width < TAB_SIZE) ?
           <div className="gx-linebar gx-mr-3 gx-flex-row">
             <i className="gx-icon-btn icon icon-menu"
@@ -61,7 +65,8 @@ const Topbar = () => {
         <SearchBox styleName="search_box gx-d-none gx-d-lg-block gx-lt-icon-search-bar-lg "
           placeholder="Search..."
           onChange={updateSearchChatUser}
-          value={searchText} />
+          value={searchText}
+        />
       </div>
 
 
